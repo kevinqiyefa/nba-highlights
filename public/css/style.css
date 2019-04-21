@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #1b1b1b;
+}
+
+.flexbox-container {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  margin-bottom: 0px;
+}
+h4 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 20px;
+  margin: 15px 0px 5px;
+}
+
+/*===================================
+              HEADER
+===================================*/
+
+header {
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header,
+footer {
+  background: #fff;
+  align-items: center;
+  padding: 10px;
+  font-family: 'Fjalla One', sans-serif;
+}
+header .logo,
+footer .logo {
+  flex-grow: 1;
+  height: 22px;
+}
+header .logo span,
+footer .logo span {
+  background: url('/images/logo.png') no-repeat;
+  display: inline-block;
+  width: 58px;
+  height: 24px;
+}
+
+footer {
+  background: #1f1f1f;
+  margin-top: 30px;
+}
+
+/*===================================
+                App
+===================================*/
+
+.App {
+  overflow: hidden;
+}
+
+/*===================================
+                SLIDER
+===================================*/
+
+.item_slider {
+  height: 700px;
+  background-size: cover !important;
+  background-position: center center !important;
+  position: relative;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.item_slider .caption {
+  color: #fff;
+  position: absolute;
+  right: 0px;
+  padding: 20px;
+  text-align: right;
+  width: 320px;
+  text-transform: uppercase;
+}
+
+.item_slider .caption h4 {
+  font-weight: 300;
+  margin: 0px;
+}
+
+.item_slider .caption p {
+  font-size: 70px;
+  margin-top: 0px;
+}
