@@ -87,36 +87,16 @@
   },
   "subcriptions": [
     {
-      "email": "fer@gmail.com",
+      "email": "test@gmail.com",
       "id": 1
     },
     {
-      "email": "dddd@gmail.com",
+      "email": "testing@gamil.com",
       "id": 2
     },
     {
-      "email": "fernando@gmail.com",
+      "email": "ttt@gmail.com",
       "id": 3
-    },
-    {
-      "email": "dddd@gmail.com",
-      "id": 4
-    },
-    {
-      "email": "fernando@gmail.como",
-      "id": 5
-    },
-    {
-      "email": "fernando@gmail.com",
-      "id": 6
-    },
-    {
-      "email": "email@email.com",
-      "id": 7
-    },
-    {
-      "email": "fernando@gmail.com",
-      "id": 8
     }
   ],
   "teams": [

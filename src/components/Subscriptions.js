@@ -5,7 +5,9 @@ export default class Subscriptions extends Component {
     super(props);
 
     this.state = {
-      email: ''
+      email: '',
+      error: false,
+      success: false
     };
   }
 
@@ -13,8 +15,45 @@ export default class Subscriptions extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  clearMessages = () => {
+    setTimeout(() => this.setState({ error: false, success: false }), 3000);
+  };
+
   handleSumbit = event => {
     event.preventDefault();
+    let email = this.state.email;
+
+    if (this.validateEmail(email)) {
+      this.saveSubscription(email);
+    } else {
+      this.setState({ error: true });
+    }
+    this.clearMessages();
+  };
+
+  validateEmail = email => {
+    const reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return reg.test(email);
+  };
+
+  saveSubscription = email => {
+    const URL_EMAIL = 'http://localhost:3004/subcriptions';
+
+    fetch(URL_EMAIL, {
+      method: 'post',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email })
+    })
+      .then(res => res.json())
+      .then(() => {
+        this.setState({
+          email: '',
+          success: true
+        });
+      });
   };
 
   render() {
@@ -31,6 +70,12 @@ export default class Subscriptions extends Component {
               name="email"
             />
           </form>
+          <div className={this.state.error ? 'error show' : 'error'}>
+            Check your mail
+          </div>
+          <div className={this.state.success ? 'success show' : 'success'}>
+            Thank you
+          </div>
         </div>
         <small>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
