@@ -148,3 +148,68 @@ footer {
 .subscribe_panel .success.show {
   display: block;
 }
+
+/*===================================
+            BLOCKS
+===================================*/
+
+.home_blocks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.home_blocks .item {
+  flex-grow: 1;
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+}
+
+.home_blocks .item.lg {
+  width: 50%;
+}
+
+.home_blocks .item.md {
+  width: 30%;
+}
+
+.home_blocks .item.sm {
+  width: 20%;
+}
+
+.home_blocks .item .image {
+  height: 270px;
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+.home_blocks .item .title {
+  background: black;
+  padding: 10px;
+  transition: all 500ms ease-in-out;
+}
+
+.home_blocks .item:hover .title {
+  transform: translate(0px, -39px);
+  transition: all 500ms ease-in-out;
+}
+
+.home_blocks .item .title a {
+  color: #fff;
+}
+
+.home_blocks .item .veil {
+  background: #000000;
+  opacity: 0.7 !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  transition: all 500ms ease-in-out;
+}
+.home_blocks .item:hover .veil {
+  opacity: 0 !important;
+  transition: all 500ms ease-in-out;
+}
