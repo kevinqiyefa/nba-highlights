@@ -260,3 +260,45 @@ footer {
   opacity: 0;
   transition: opacity 500ms ease-in;
 }
+
+.teams_component {
+  min-height: 800px;
+}
+
+.teams_input {
+  text-align: center;
+  padding: 20px 0px;
+  background: #e6e6e6;
+}
+
+.teams_input input {
+  font-family: Roboto;
+  border-radius: 30px;
+  border: 1px solid lightgrey;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.teams_input input:focus {
+  outline: none;
+}
+
+.teams_container {
+  padding: 2em;
+}
+.teams_container .teams_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.teams_container .team_item {
+  width: 25%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.teams_container .team_item img {
+  width: 100%;
+}

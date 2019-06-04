@@ -10,7 +10,17 @@ function Teams() {
   const [filtered, setFiltered] = useState([]);
 
   const searchTeam = e => {
-    setKeyword(e.target.value);
+    const input = e.target.value;
+
+    if (input) {
+      const filteredItems = teams.filter(
+        team => team.name.toLowerCase().indexOf(input.toLowerCase()) > -1
+      );
+      setFiltered(filteredItems);
+    } else {
+      setFiltered(teams);
+    }
+    setKeyword(input);
   };
 
   const fetchTeamsData = () => {
@@ -47,7 +57,7 @@ function Teams() {
         />
       </div>
       <div className="teams_container">
-        <TransitionGroup>{renderList()}</TransitionGroup>
+        <TransitionGroup className="teams_list">{renderList()}</TransitionGroup>
       </div>
     </div>
   );
