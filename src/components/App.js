@@ -5,6 +5,7 @@ import Home from './Home';
 import Header from './Header';
 import Footer from './Footer';
 import Teams from './Teams';
+import Team from './Team';
 
 class App extends Component {
   render() {
@@ -14,6 +15,11 @@ class App extends Component {
           <Header />
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/teams" render={() => <Teams />} />
+          <Route
+            exact
+            path="/team/:name"
+            render={props => <Team {...props} />}
+          />
           <Footer />
         </div>
       </BrowserRouter>
